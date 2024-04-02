@@ -16,3 +16,21 @@ go_binary(
     embed = [":cmd_lib"],
     visibility = ["//visibility:public"],
 )
+
+load("@rules_pkg//pkg:tar.bzl", "pkg_tar")
+
+pkg_tar(
+    name = "test_layer",
+    srcs = [":cmd"],
+)
+
+load("@rules_oci//oci:defs.bzl", "oci_image")
+
+oci_image(
+    name = "test_image",
+    base = "@distroless_base",
+    entrypoint = ["/test"],
+    tars = [":test_layer"],
+    visibility = ["//visibility:public"],
+    workdir = "/app",
+)
