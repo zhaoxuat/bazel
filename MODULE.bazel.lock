@@ -1,6 +1,6 @@
 {
   "lockFileVersion": 6,
-  "moduleFileHash": "e636b1ea6dfcef476a0057dd462001af6f57b39902d85cc765c898934ec5a420",
+  "moduleFileHash": "dec0ac5227452a61478fd8c48883a6d109bd6cfc2536042ef86ae6940d953a5a",
   "flags": {
     "cmdRegistries": [
       "https://bcr.bazel.build/"
@@ -101,8 +101,8 @@
               "tagName": "pull",
               "attributeValues": {
                 "name": "distroless_base",
-                "digest": "sha256:ccaef5ee2f1850270d453fdf700a5392534f8d1a8ca2acda391fbb6a06b81c86",
-                "image": "gcr.io/distroless/base",
+                "digest": "sha256:77906da86b60585ce12215807090eb327e7386c8fafb5402369e421f44eff17e",
+                "image": "docker.io/library/ubuntu",
                 "platforms": [
                   "linux/amd64",
                   "linux/arm64"
@@ -3809,9 +3809,9 @@
             "attributes": {
               "target_name": "distroless_base",
               "scheme": "https",
-              "registry": "gcr.io",
-              "repository": "distroless/base",
-              "identifier": "sha256:ccaef5ee2f1850270d453fdf700a5392534f8d1a8ca2acda391fbb6a06b81c86",
+              "registry": "index.docker.io",
+              "repository": "library/ubuntu",
+              "identifier": "sha256:77906da86b60585ce12215807090eb327e7386c8fafb5402369e421f44eff17e",
               "platforms": {
                 "@@platforms//cpu:x86_64": "@distroless_base_linux_amd64",
                 "@@platforms//cpu:arm64": "@distroless_base_linux_arm64"
@@ -3953,9 +3953,9 @@
             "ruleClassName": "oci_pull",
             "attributes": {
               "scheme": "https",
-              "registry": "gcr.io",
-              "repository": "distroless/base",
-              "identifier": "sha256:ccaef5ee2f1850270d453fdf700a5392534f8d1a8ca2acda391fbb6a06b81c86",
+              "registry": "index.docker.io",
+              "repository": "library/ubuntu",
+              "identifier": "sha256:77906da86b60585ce12215807090eb327e7386c8fafb5402369e421f44eff17e",
               "platform": "linux/amd64",
               "target_name": "distroless_base_linux_amd64",
               "config_path": "@@rules_oci~~oci~oci_auth_config//:standard_authorization_config_path"
@@ -4095,9 +4095,9 @@
             "ruleClassName": "oci_pull",
             "attributes": {
               "scheme": "https",
-              "registry": "gcr.io",
-              "repository": "distroless/base",
-              "identifier": "sha256:ccaef5ee2f1850270d453fdf700a5392534f8d1a8ca2acda391fbb6a06b81c86",
+              "registry": "index.docker.io",
+              "repository": "library/ubuntu",
+              "identifier": "sha256:77906da86b60585ce12215807090eb327e7386c8fafb5402369e421f44eff17e",
               "platform": "linux/arm64",
               "target_name": "distroless_base_linux_arm64",
               "config_path": "@@rules_oci~~oci~oci_auth_config//:standard_authorization_config_path"

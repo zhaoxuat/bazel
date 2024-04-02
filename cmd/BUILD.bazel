@@ -29,7 +29,7 @@ load("@rules_oci//oci:defs.bzl", "oci_image")
 oci_image(
     name = "test_image",
     base = "@distroless_base",
-    entrypoint = ["/test"],
+    entrypoint = ["/cmd"],
     tars = [":test_layer"],
     visibility = ["//visibility:public"],
     workdir = "/app",

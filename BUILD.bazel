@@ -9,12 +9,12 @@ gazelle(
     visibility = ["//visibility:public"],
 )
 
-
 load("@rules_oci//oci:defs.bzl", "oci_push")
 
+# remote_tags need change
 oci_push(
     name = "test",
     image = "//cmd:test_image",
-    remote_tags = ":stamped",
     repository = "harbor.dh3.ai/kubevirt/test",
+    remote_tags = ["latest"],
 )

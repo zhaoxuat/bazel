@@ -22,8 +22,8 @@ bazel_dep(name = "aspect_bazel_lib", version = "2.4.1")
 oci = use_extension("@rules_oci//oci:extensions.bzl", "oci")
 oci.pull(
     name = "distroless_base",
-    digest = "sha256:ccaef5ee2f1850270d453fdf700a5392534f8d1a8ca2acda391fbb6a06b81c86",
-    image = "gcr.io/distroless/base",
+    digest = "sha256:77906da86b60585ce12215807090eb327e7386c8fafb5402369e421f44eff17e",
+    image = "docker.io/library/ubuntu",
     platforms = [
         "linux/amd64",
         "linux/arm64",
